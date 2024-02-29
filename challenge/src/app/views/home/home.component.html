@@ -1,0 +1,19 @@
+<ion-header>
+  <app-nav-bar></app-nav-bar>
+</ion-header>
+<ion-content>
+  <div class="container">
+    @for (demo of demos; track demo) {
+      <ion-card routerLink="{{demo.route}}">
+        <ion-card-header>
+          <ion-card-title>{{demo.title}}</ion-card-title>
+          <ion-card-subtitle>{{demo.subtitle}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{demo.description}}</ion-card-content>
+      </ion-card>
+    }
+  </div>
+</ion-content>
+<ion-footer>
+  <app-footer-bar></app-footer-bar>
+</ion-footer>

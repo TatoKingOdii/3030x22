@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import {IonApp, IonRouterOutlet} from "@ionic/angular/standalone";
+import { RouterOutlet } from '@angular/router';
+import {IonApp, IonContent, IonFooter, IonHeader, IonRouterOutlet} from '@ionic/angular/standalone';
+import {NavBarComponent} from "./views/shared/nav-bar/nav-bar.component";
+import {FooterBarComponent} from "./views/shared/footer-bar/footer-bar.component";
 
 @Component({
-  selector: 'c3030x22-root',
+  selector: 'app-root',
   standalone: true,
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
-  imports: [
-    IonApp,
-    IonRouterOutlet
-  ]
+  imports: [RouterOutlet, IonApp, IonRouterOutlet, IonFooter, IonHeader, NavBarComponent, FooterBarComponent, IonContent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  constructor() {}
+  title = '3030x22';
 }

@@ -1,0 +1,24 @@
+<ion-header>
+  <app-nav-bar></app-nav-bar>
+</ion-header>
+<ion-content>
+  <div class="login-container">
+    <ion-card>
+      <ion-card-header class="ion-text-start">
+        <h2>Login</h2>
+      </ion-card-header>
+      <ion-card-content [formGroup]="loginForm">
+        <ion-input type="text" placeholder="Username" fill="solid" formControlName="user"></ion-input>
+        <ion-input type="password" placeholder="Password"
+                   fill="solid" formControlName="pass" (keyup.enter)="login()"></ion-input>
+        <p class="ion-float-left">Don't have an account? <a routerLink="/register">Register</a></p>
+        <ion-buttons class="ion-float-right">
+          <ion-button type="submit" [disabled]="loginForm.invalid" (click)="login()">Login</ion-button>
+        </ion-buttons>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-footer>
+  <app-footer-bar></app-footer-bar>
+</ion-footer>

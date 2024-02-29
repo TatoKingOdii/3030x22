@@ -1,0 +1,23 @@
+<ion-header>
+  <app-nav-bar></app-nav-bar>
+</ion-header>
+<ion-content>
+  <div class="register-container">
+    <ion-card>
+      <ion-card-header>
+        <h2>Register</h2>
+      </ion-card-header>
+      <ion-card-content>
+        <form>
+          <ion-input type="text" placeholder="Username" fill="solid"></ion-input>
+          <ion-input type="password" placeholder="Password" fill="solid"></ion-input>
+          <ion-button class="ion-float-right" type="submit">Register</ion-button>
+        </form>
+        <p class="ion-float-left ion-padding-vertical">Already have an account? <a routerLink="/login">Login</a></p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-footer>
+  <app-footer-bar></app-footer-bar>
+</ion-footer>
