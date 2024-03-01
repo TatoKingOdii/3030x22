@@ -1,0 +1,25 @@
+<ion-content>
+  <ion-card class="ion-padding" [formGroup]="locationForm">
+    <ion-card-header>
+      <ion-card-title class="ion-text-start">
+        Create a Location!
+      </ion-card-title>
+    </ion-card-header>
+    <ion-input type="text" placeholder="Name" formControlName="name"></ion-input>
+    <ion-input type="text" placeholder="Climate" formControlName="climate"></ion-input>
+    <ion-input type="text" placeholder="Cost of Living" formControlName="cost"></ion-input>
+    <ion-input type="text" placeholder="Attractions" formControlName="attractions"></ion-input>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [disabled]="locationForm.invalid" (click)="saveForm(); dismiss()">
+        {{locationForm.value.id ? 'Save' : 'Create'}}
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

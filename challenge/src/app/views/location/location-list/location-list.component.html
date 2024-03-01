@@ -1,0 +1,34 @@
+<ion-list>
+  <ion-list-header>
+    <ion-label>
+      <h1>Locations</h1>
+    </ion-label>
+    <ion-buttons>
+      <ion-button (click)="openModal(null)">
+        <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-list-header>
+  @for (loc of locations!; track loc; let idx = $index) {
+    <ion-item>
+      <ion-label>
+        <p>{{loc.name}}</p>
+        <p>{{loc.climate}}</p>
+        <p>{{loc.cost}}</p>
+        <p>{{loc.attractions}}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="openModal(idx)">
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="deleteLocation(idx)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  } @empty {
+    <ion-item>
+      There are no locations!
+    </ion-item>
+  }
+</ion-list>

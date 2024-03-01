@@ -1,0 +1,19 @@
+<ion-header>
+  <app-nav-bar></app-nav-bar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+      <ion-col size="6">
+        <app-location-list [locations]="locationFacade.locations$ | async"
+                           [loadingLocations]="locationFacade.isLoadingLocations$ | async">
+
+        </app-location-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <app-footer-bar></app-footer-bar>
+</ion-footer>
+

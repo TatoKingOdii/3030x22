@@ -1,0 +1,18 @@
+.full-width {
+  width: 100%;
+}
+
+ion-card {
+  //flex: 1 1 23%;
+  width: 20%;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  flex-wrap: wrap;
+  padding-left: 5%;
+  padding-right: 5%;
+}
